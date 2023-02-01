@@ -16,28 +16,44 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition : margin-left 0.8s
 }
-svg{
+#menu{
     margin-right:2rem;
     cursor: pointer;
+    fill : #111;
 }
-svg:hover, li:hover{
+#menu:hover, li:hover{
     opacity:0.8;
 }
-.container{
-}
-.navigation-menu{
-    display:flex;
+/* .container{
+
+} */
+#navigation-menu{
     flex-direction: column;
-    height:100vh;
-    width:350px;
     align-items: center;
-    padding-top:2rem;
+    padding-top:1rem;
     font-size:32px;
     color:white;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    animation-duration: 0.8s; 
 }
 
-.navigation-menu > li {
+#close{
+    padding-left: 75%;
+    padding-bottom:2rem;
+}
+#close:hover {
+    opacity:0.8;
+}
+#navigation-menu > li {
     cursor: pointer;
     padding-bottom:2rem;
     padding-top:2rem;
