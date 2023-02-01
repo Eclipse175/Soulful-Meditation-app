@@ -8,12 +8,18 @@
     <title>SoulFul</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
+        <video autoplay muted loop class="myVideo">
+            <source src="rain.mp4" type="video/mp4">
+          </video>
+          <audio controls loop>
+            <source src = 'rainsound.mp3'>
+          </audio>
         <nav id="nav-container">
             <h1>Soulful</h1>
             <svg id='menu' fill="#000000" width="50" height="70" viewBox="0 0 64 64" version="1.1"
@@ -135,27 +141,26 @@
                     </g>
                 </g>
             </svg>
-
-            <div id="navigation-menu" class = 'animate__animated animate__slideInLeft'>
-                <svg id='close' fill="#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="50px" viewBox="0 0 503.021 503.021"
-                    xml:space="preserve">
-                    <g>
-                        <g>
-                            <path d="M491.613,75.643l-64.235-64.235c-15.202-15.202-39.854-15.202-55.056,0L251.507,132.222L130.686,11.407
-			c-15.202-15.202-39.853-15.202-55.055,0L11.401,75.643c-15.202,15.202-15.202,39.854,0,55.056l120.821,120.815L11.401,372.328
-			c-15.202,15.202-15.202,39.854,0,55.056l64.235,64.229c15.202,15.202,39.854,15.202,55.056,0l120.815-120.814l120.822,120.814
-			c15.202,15.202,39.854,15.202,55.056,0l64.235-64.229c15.202-15.202,15.202-39.854,0-55.056L370.793,251.514l120.82-120.815
-			C506.815,115.49,506.815,90.845,491.613,75.643z" />
-                        </g>
-                    </g>
-                </svg>
-                <li>Study</li>
-                <li>Meditate</li>
-                <li>Chilling</li>
-                <li>Sad hours</li>
-            </div>
         </nav>
+        <div id="navigation-menu" class = 'animate__animated animate__slideInLeft'>
+            <svg id='close' fill="#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="50px" viewBox="0 0 503.021 503.021"
+                xml:space="preserve">
+                <g>
+                    <g>
+                        <path d="M491.613,75.643l-64.235-64.235c-15.202-15.202-39.854-15.202-55.056,0L251.507,132.222L130.686,11.407
+        c-15.202-15.202-39.853-15.202-55.055,0L11.401,75.643c-15.202,15.202-15.202,39.854,0,55.056l120.821,120.815L11.401,372.328
+        c-15.202,15.202-15.202,39.854,0,55.056l64.235,64.229c15.202,15.202,39.854,15.202,55.056,0l120.815-120.814l120.822,120.814
+        c15.202,15.202,39.854,15.202,55.056,0l64.235-64.229c15.202-15.202,15.202-39.854,0-55.056L370.793,251.514l120.82-120.815
+        C506.815,115.49,506.815,90.845,491.613,75.643z" />
+                    </g>
+                </g>
+            </svg>
+            <li id = 'study'>Study</li>
+            <li id = 'meditate'>Meditate</li>
+            <li id = 'chill'>Chilling</li>
+            <li id = 'sad-hours'>Sad hours</li>
+        </div>
 
     </div>
 
