@@ -3,10 +3,16 @@ const logo = document.querySelector('h1')
 const navMenu = document.getElementById('navigation-menu')
 const nav = document.querySelector('nav');
 const cross = document.getElementById('close');
-const video = document.querySelector('video');
-const audio = new Audio('rainsound.mp3');
+
+const chillVideo = document.getElementById('myVideo');
+const studyVideo = document.getElementById('studyM');
 
 
+const chillAudio = new Audio('rainsound.mp3');
+const studyAudio = new Audio('studymoosic.mp3');
+
+const body = document.querySelector('body');
+const timerButtons = document.getElementById('timer');
 //button selectors below :
 const studyMusic = document.getElementById('study');
 const meditateMusic = document.getElementById('meditate')
@@ -30,7 +36,14 @@ cross.addEventListener('click', function () {
 })
 
 chillMusic.addEventListener('click', function () {
-    video.style.display = 'block';
-    audio.play();
-    cross.clicked();
+    chillVideo.style.display = 'block';
+    chillAudio.play();
+    timerButtons.style.display = 'flex';
 })
+
+studyMusic.addEventListener('click', function () {
+    studyAudio.play();
+    studyVideo.style.display = 'block';
+    timerButtons.style.display = 'flex';
+})
+

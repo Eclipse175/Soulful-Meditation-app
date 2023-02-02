@@ -14,12 +14,21 @@
 
 <body>
     <div class="container">
-        <video autoplay muted loop class="myVideo">
+
+        <video id="myVideo" autoplay muted loop >
             <source src="rain.mp4" type="video/mp4">
           </video>
           <audio controls loop>
             <source src = 'rainsound.mp3'>
           </audio>
+
+          <video id = 'studyM' autoplay loop muted>
+            <source src = 'study.mp4' type="video/mp4">
+          </video>
+          <audio controls loop>
+            <source src = 'studymoosic.mp3'>
+          </audio>
+
         <nav id="nav-container">
             <h1>Soulful</h1>
             <svg id='menu' fill="#000000" width="50" height="70" viewBox="0 0 64 64" version="1.1"
@@ -143,7 +152,7 @@
             </svg>
         </nav>
         <div id="navigation-menu" class = 'animate__animated animate__slideInLeft'>
-            <svg id='close' fill="#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+            <svg class = 'animate__animated animate__slideInLeft' id='close' fill="#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="50px" viewBox="0 0 503.021 503.021"
                 xml:space="preserve">
                 <g>
@@ -156,12 +165,16 @@
                     </g>
                 </g>
             </svg>
-            <li id = 'study'>Study</li>
-            <li id = 'meditate'>Meditate</li>
-            <li id = 'chill'>Chilling</li>
-            <li id = 'sad-hours'>Sad hours</li>
+            <li class = 'animate__animated animate__slideInLeft' id = 'study'>Study</li>
+            <li class = 'animate__animated animate__slideInLeft' id = 'meditate'>Meditate</li>
+            <li class = 'animate__animated animate__slideInLeft' id = 'chill'>Chilling</li>
+            <li class = 'animate__animated animate__slideInLeft' id = 'sad-hours'>Sad hours</li>
         </div>
-
+        <div id = 'timer'>
+           <div class="2min time" id = 'timer-buttons'>2 Minutes</div>
+           <div class="5min time" id = 'timer-buttons'>5 Minutes</div>
+           <div class="10min time" id = 'timer-buttons'>10 Minutes</div>
+          </div>
     </div>
 
     <script src="app.js" async defer></script>
