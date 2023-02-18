@@ -11,7 +11,6 @@ const studyMusic = document.getElementById('study')
 const meditateMusic = document.getElementById('meditate')
 const chillMusic = document.getElementById('chill')
 const sadMusic = document.getElementById('sad-as-heck')
-const Links = document.getElementsByTagName('li')
 
 const studyVideo = document.getElementById('studyM');
 const studyAudio = new Audio('studymoosic.mp3');
@@ -21,6 +20,9 @@ const chillAudio = new Audio('rainsound.mp3');
 
 const sadVideo = document.getElementById('sad-hours');
 const sadAudio = new Audio('sadsong.mp3');
+
+const meditatingVideo = document.getElementById('medit');
+const meditatingAudio = new Audio('medit.mp3');
 
 
 menu.addEventListener('click', function () {
@@ -54,6 +56,13 @@ studyMusic.addEventListener('click', function () {
         sadAudio.pause();
         sadAudio.currentTime = 0;
         sadVideo.style.display = 'none';
+
+
+        meditatingVideo.pause();
+        meditatingVideo.currentTime = 0;
+        meditatingAudio.pause();
+        meditatingAudio.currentTime = 0;
+        meditatingVideo.style.display = 'none';
     }
 })
 
@@ -75,6 +84,13 @@ chillMusic.addEventListener('click', function () {
         sadAudio.pause();
         sadAudio.currentTime = 0;
         sadVideo.style.display = 'none';
+
+
+        meditatingVideo.pause();
+        meditatingVideo.currentTime = 0;
+        meditatingAudio.pause();
+        meditatingAudio.currentTime = 0;
+        meditatingVideo.style.display = 'none';
     }
 })
 
@@ -94,4 +110,37 @@ sadMusic.addEventListener('click', function () {
     chillAudio.pause();
     chillAudio.currentTime = 0;
     chillVideo.style.display = 'none';
+
+
+    meditatingVideo.pause();
+    meditatingVideo.currentTime = 0;
+    meditatingAudio.pause();
+    meditatingAudio.currentTime = 0;
+    meditatingVideo.style.display = 'none';
 })
+
+meditateMusic.addEventListener('click', function () {
+    meditatingVideo.play();
+    meditatingAudio.play();
+    meditatingVideo.style.display = 'block';
+
+    studyVideo.pause()
+    studyVideo.currentTime = 0;
+    studyAudio.pause();
+    studyAudio.currentTime = 0;
+    studyVideo.style.display = 'none';
+
+    chillVideo.pause()
+    chillVideo.currentTime = 0;
+    chillAudio.pause();
+    chillAudio.currentTime = 0;
+    chillVideo.style.display = 'none';
+
+    sadVideo.pause()
+    sadVideo.currentTime = 0;
+    sadAudio.pause();
+    sadAudio.currentTime = 0;
+    sadVideo.style.display = 'none';
+})
+
+// make a pause button
