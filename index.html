@@ -15,36 +15,36 @@
 <body>
     <div class="container">
 
-        <video id="myVideo" autoplay muted loop >
+        <video id="myVideo" autoplay muted loop>
             <source src="rain.mp4" type="video/mp4">
-          </video>
-          <audio controls loop>
-            <source src = 'rainsound.mp3'>
-          </audio>
+        </video>
+        <audio controls loop>
+            <source src='rainsound.mp3'>
+        </audio>
 
-          <video id = 'studyM' autoplay loop muted>
-            <source src = 'study.mp4' type="video/mp4">
-          </video>
-          <audio controls loop>
-            <source src = 'studymoosic.mp3'>
-          </audio>
+        <video id='studyM' autoplay loop muted>
+            <source src='study.mp4' type="video/mp4">
+        </video>
+        <audio controls loop>
+            <source src='studymoosic.mp3'>
+        </audio>
 
-          <video id = 'sad-hours' autoplay loop muted>
-            <source src = 'sad.mp4' type="video/mp4">
-          </video>
-          <audio controls loop>
-            <source src = 'sadsong.mp3'>
-          </audio>
+        <video id='sad-hours' autoplay loop muted>
+            <source src='sad.mp4' type="video/mp4">
+        </video>
+        <audio controls loop>
+            <source src='sadsong.mp3'>
+        </audio>
 
-          <video id = 'medit' autoplay loop muted>
-            <source src = 'forest.mp4' type="video/mp4">
-          </video>
-          <audio controls loop>
-            <source src = 'medit.mp3'>
-          </audio>
+        <video id='medit' autoplay loop muted>
+            <source src='forest.mp4' type="video/mp4">
+        </video>
+        <audio controls loop>
+            <source src='medit.mp3'>
+        </audio>
 
         <nav id="nav-container">
-            <h1 id = 'logo'>Soulful</h1>
+            <h1 id='logo'>Soulful</h1>
             <svg id='menu' fill="#000000" width="50" height="70" viewBox="0 0 64 64" version="1.1"
                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
                 xmlns:serif="http://www.serif.com/"
@@ -165,10 +165,10 @@
                 </g>
             </svg>
         </nav>
-        <div id="navigation-menu" class = 'animate__animated animate__slideInLeft'>
-            <svg class = 'animate__animated animate__slideInLeft' id='close' fill="#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="50px" viewBox="0 0 503.021 503.021"
-                xml:space="preserve">
+        <div id="navigation-menu" class='animate__animated animate__slideInLeft'>
+            <svg class='animate__animated animate__slideInLeft' id='close' fill="#fff" version="1.1" id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="50px"
+                viewBox="0 0 503.021 503.021" xml:space="preserve">
                 <g>
                     <g>
                         <path d="M491.613,75.643l-64.235-64.235c-15.202-15.202-39.854-15.202-55.056,0L251.507,132.222L130.686,11.407
@@ -179,15 +179,19 @@
                     </g>
                 </g>
             </svg>
-            <li class = 'animate__animated animate__slideInLeft links' id = 'study'>Study</li>
-            <li class = 'animate__animated animate__slideInLeft links' id = 'meditate'>Meditate</li>
-            <li class = 'animate__animated animate__slideInLeft links' id = 'chill'>Chilling</li>
-            <li class = 'animate__animated animate__slideInLeft links' id = 'sad-as-heck'>Sad hours</li>
+            <li class='animate__animated animate__slideInLeft links' id='study'>Study</li>
+            <li class='animate__animated animate__slideInLeft links' id='meditate'>Meditate</li>
+            <li class='animate__animated animate__slideInLeft links' id='chill'>Chilling</li>
+            <li class='animate__animated animate__slideInLeft links' id='sad-as-heck'>Sad hours</li>
+        </div>
+        <div id="timer">
+            <!-- <h1 id = 'minutes'>Minutes</h1> -->
+            <h1 id = 'seconds'>Seconds</h1>
         </div>
     </div>
 
     <script src="app.js" async defer></script>
-    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script src="timer.js" async defer></script>
 </body>
 
 </html>

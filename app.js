@@ -3,8 +3,6 @@ const logo = document.querySelector('h1')
 const navMenu = document.getElementById('navigation-menu')
 const nav = document.querySelector('nav');
 const cross = document.getElementById('close');
-
-
 const body = document.querySelector('body');
 //button selectors below :
 const studyMusic = document.getElementById('study')
@@ -24,7 +22,6 @@ const sadAudio = new Audio('sadsong.mp3');
 const meditatingVideo = document.getElementById('medit');
 const meditatingAudio = new Audio('medit.mp3');
 
-
 menu.addEventListener('click', function () {
     navMenu.style.width = '350px';
     //pushes content to the side
@@ -40,10 +37,12 @@ cross.addEventListener('click', function () {
 })
 
 studyMusic.addEventListener('click', function () {
-    if (studyMusic.click = true) {
+    if(studyMusic.click = true) {
         studyVideo.play();
         studyAudio.play();
         studyVideo.style.display = 'block';
+        timer.style.display = 'flex';
+    } 
 
         chillVideo.pause()
         chillVideo.currentTime = 0;
@@ -57,17 +56,14 @@ studyMusic.addEventListener('click', function () {
         sadAudio.currentTime = 0;
         sadVideo.style.display = 'none';
 
-
         meditatingVideo.pause();
         meditatingVideo.currentTime = 0;
         meditatingAudio.pause();
         meditatingAudio.currentTime = 0;
         meditatingVideo.style.display = 'none';
-    }
 })
 
 chillMusic.addEventListener('click', function () {
-    if (chillMusic.click = true) {
 
         chillVideo.play();
         chillAudio.play();
@@ -91,7 +87,6 @@ chillMusic.addEventListener('click', function () {
         meditatingAudio.pause();
         meditatingAudio.currentTime = 0;
         meditatingVideo.style.display = 'none';
-    }
 })
 
 sadMusic.addEventListener('click', function () {
@@ -143,4 +138,15 @@ meditateMusic.addEventListener('click', function () {
     sadVideo.style.display = 'none';
 })
 
-// make a pause button
+// make a timer
+
+let time;
+const second = document.getElementById('seconds');
+
+(function timer() {
+  var sec = 0;
+  time = setInterval(function() {
+    second.innerHTML = '00:'+ sec;
+    sec++
+  }, 1000)
+})()

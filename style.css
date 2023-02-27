@@ -246,3 +246,13 @@ li:active {
   color: #000;
   font-weight: bold;
 }
+
+#timer {
+  display:none;
+  justify-content: center;
+  align-items: center;
+  height:60vh;
+}
+#minutes, #seconds {
+  font-size:120px;
+}
