@@ -37,56 +37,53 @@ cross.addEventListener('click', function () {
 })
 
 studyMusic.addEventListener('click', function () {
-    if(studyMusic.click = true) {
-        studyVideo.play();
-        studyAudio.play();
-        studyVideo.style.display = 'block';
-        timer.style.display = 'flex';
-    } 
+    studyVideo.play();
+    studyAudio.play();
+    studyVideo.style.display = 'block';
 
-        chillVideo.pause()
-        chillVideo.currentTime = 0;
-        chillAudio.pause();
-        chillAudio.currentTime = 0;
-        chillVideo.style.display = 'none';
+    chillVideo.pause()
+    chillVideo.currentTime = 0;
+    chillAudio.pause();
+    chillAudio.currentTime = 0;
+    chillVideo.style.display = 'none';
 
-        sadVideo.pause()
-        sadVideo.currentTime = 0;
-        sadAudio.pause();
-        sadAudio.currentTime = 0;
-        sadVideo.style.display = 'none';
+    sadVideo.pause()
+    sadVideo.currentTime = 0;
+    sadAudio.pause();
+    sadAudio.currentTime = 0;
+    sadVideo.style.display = 'none';
 
-        meditatingVideo.pause();
-        meditatingVideo.currentTime = 0;
-        meditatingAudio.pause();
-        meditatingAudio.currentTime = 0;
-        meditatingVideo.style.display = 'none';
+    meditatingVideo.pause();
+    meditatingVideo.currentTime = 0;
+    meditatingAudio.pause();
+    meditatingAudio.currentTime = 0;
+    meditatingVideo.style.display = 'none';
 })
 
 chillMusic.addEventListener('click', function () {
 
-        chillVideo.play();
-        chillAudio.play();
-        chillVideo.style.display = 'block';
+    chillVideo.play();
+    chillAudio.play();
+    chillVideo.style.display = 'block';
 
-        studyVideo.pause()
-        studyVideo.currentTime = 0;
-        studyAudio.pause();
-        studyAudio.currentTime = 0;
-        studyVideo.style.display = 'none';
+    studyVideo.pause()
+    studyVideo.currentTime = 0;
+    studyAudio.pause();
+    studyAudio.currentTime = 0;
+    studyVideo.style.display = 'none';
 
-        sadVideo.pause()
-        sadVideo.currentTime = 0;
-        sadAudio.pause();
-        sadAudio.currentTime = 0;
-        sadVideo.style.display = 'none';
+    sadVideo.pause()
+    sadVideo.currentTime = 0;
+    sadAudio.pause();
+    sadAudio.currentTime = 0;
+    sadVideo.style.display = 'none';
 
 
-        meditatingVideo.pause();
-        meditatingVideo.currentTime = 0;
-        meditatingAudio.pause();
-        meditatingAudio.currentTime = 0;
-        meditatingVideo.style.display = 'none';
+    meditatingVideo.pause();
+    meditatingVideo.currentTime = 0;
+    meditatingAudio.pause();
+    meditatingAudio.currentTime = 0;
+    meditatingVideo.style.display = 'none';
 })
 
 sadMusic.addEventListener('click', function () {
@@ -138,15 +135,20 @@ meditateMusic.addEventListener('click', function () {
     sadVideo.style.display = 'none';
 })
 
-// make a timer
+// make a timer and a listener to trigger that timer
 
 let time;
-const second = document.getElementById('seconds');
+const listItems = document.querySelectorAll('li')
+listItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+        (function timer() {
+            var sec = 0;
+            time = setInterval(function () {
+                logo.innerHTML = '00:' + sec;
+                sec++
+            }, 1000)
+        })()
+    })
+})
 
-(function timer() {
-  var sec = 0;
-  time = setInterval(function() {
-    second.innerHTML = '00:'+ sec;
-    sec++
-  }, 1000)
-})()
+
