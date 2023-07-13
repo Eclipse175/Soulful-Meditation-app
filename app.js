@@ -138,17 +138,19 @@ meditateMusic.addEventListener('click', function () {
 // make a timer and a listener to trigger that timer
 
 let time;
-const listItems = document.querySelectorAll('li')
+const listItems = document.querySelectorAll('li');
 listItems.forEach(function (item) {
-    item.addEventListener('click', function () {
-        (function timer() {
-            var sec = 0;
-            time = setInterval(function () {
-                logo.innerHTML = '00:' + sec;
-                sec++
-            }, 1000)
-        })()
-    })
-})
-
+  item.addEventListener('click', function () {
+    if (time) {
+      clearInterval(time); // Clear the previous timer if it exists
+    }
+    (function timer() {
+      var sec = 0;
+      time = setInterval(function () {
+        logo.innerHTML = '00:' + sec;
+        sec++;
+      }, 1000);
+    })();
+  });
+});
 
