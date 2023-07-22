@@ -155,6 +155,7 @@ listItems.forEach(function (item) {
          + String(seconds).padStart(2, '0');
         timerMiddle.style.display = 'flex';
         timerMiddle.innerHTML = formattedTime;
+        playAndPause.style.display = 'flex';
         sec++;
       }, 1000);
     })();
