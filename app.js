@@ -1,5 +1,5 @@
 const menu = document.getElementById('menu');
-const logo = document.querySelector('h1')
+const timerMiddle = document.getElementById('timer-middle');
 const navMenu = document.getElementById('navigation-menu')
 const nav = document.querySelector('nav');
 const cross = document.getElementById('close');
@@ -135,9 +135,9 @@ meditateMusic.addEventListener('click', function () {
     sadVideo.style.display = 'none';
 })
 
-// make a timer and a listener to trigger that timer
-
 let time;
+const playAndPause = document.getElementById('play-pause');
+
 const listItems = document.querySelectorAll('li');
 listItems.forEach(function (item) {
   item.addEventListener('click', function () {
@@ -145,12 +145,20 @@ listItems.forEach(function (item) {
       clearInterval(time); // Clear the previous timer if it exists
     }
     (function timer() {
-      var sec = 0;
+      let sec = 0;
       time = setInterval(function () {
-        logo.innerHTML = '00:' + sec;
+        const minutes = Math.floor(sec / 60);
+        const seconds = sec % 60;
+        const formattedTime = 
+           String(minutes).padStart(2, '0') + 
+        ':'
+         + String(seconds).padStart(2, '0');
+        timerMiddle.style.display = 'flex';
+        timerMiddle.innerHTML = formattedTime;
         sec++;
       }, 1000);
     })();
   });
 });
+
 

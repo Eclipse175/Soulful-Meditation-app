@@ -73,11 +73,36 @@ li:hover {
   animation-duration: 1s;
 }
 
+#timer-div {
+  display : flex;
+  justify-content: center;
+  align-items: center;
+}
+#timer-middle {
+  color :white;
+  /* background-color : rgb(122, 79, 186, 0.7);
+  padding : 2rem;
+  border-radius: 16px; */
+  font-size : 128px;
+}
+#play-pause {
+  display :none;
+  justify-content: center;
+  align-items: center;
+}
+#play, #pause {
+  margin : 3rem;
+  transition : 0.2s ease-in-out;
+}
+#play:hover, #pause:hover {
+  opacity : 0.7;
+}
 @media screen and (min-width:280px) and (max-width : 450px) {
 
-  #logo {
-    font-size: 24px;
-    margin-left: 2rem;
+  #timer-middle {
+    font-size: 36px;
+    margin : 0;
+    margin-top : 2rem;
   }
 
   #menu {
@@ -247,7 +272,7 @@ li:active {
   font-weight: bold;
 }
 
-#timer {
+/* #timer {
   display:none;
   justify-content: center;
   align-items: center;
@@ -255,7 +280,4 @@ li:active {
 }
 #minutes, #seconds {
   font-size:120px;
-
-
-}
-
+} */
