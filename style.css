@@ -80,28 +80,35 @@ li:hover {
   align-items: center;
 }
 #timer-middle {
+  animation-duration: 1.5s; /* don't forget to set a duration! */
   color :white;
-  /* background-color : rgb(122, 79, 186, 0.7);
-  padding : 2rem;
-  border-radius: 16px; */
   font-size : 128px;
   margin : 0;
+  display : none;
+  margin-bottom : 2rem;
 }
 #play-pause {
-  display :none;
+  animation-duration: 1.85s; /* don't forget to set a duration! */
+  display : none;
   justify-content: center;
   align-items: center;
 }
+#play {
+  display : flex;
+}
+#reset {
+  margin : 2rem;
+}
 #play, #pause {
-  margin : 3rem;
-  transition : 0.3s ease-in-out;
+  margin : 2rem;
+  transition : 0.1s ease-in-out;
   cursor : pointer;
 }
-#play:hover, #pause:hover {
+/* #play:hover, #pause:hover {
   opacity : 0.7;
-}
-#play:hover, #pause:hover {
-  transform : scale(1.5);
+} */
+#play:active, #pause:active {
+  transform : scale(0.85);
 }
 @media screen and (min-width:280px) and (max-width : 450px) {
 
