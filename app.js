@@ -185,8 +185,10 @@ meditateMusic.addEventListener('click', function () {
 // playButton.addEventListener('click', play);
 // pauseButton.addEventListener('click', pause);
 
+const timerIcon = document.getElementById('timer-link');
 
 var watch = (function () {
+  var parentTimer = document.getElementById('parent-timer-div')
   var timer = document.getElementById("timer-middle");
   var stop = document.getElementById("pause");
   var start = document.getElementById("play");
@@ -195,15 +197,24 @@ var watch = (function () {
   var seconds = 0;
   var minutes = 0;
   var t;
+  timer.textContent = time;
 
-  listItems.forEach((item) => {
-    item.addEventListener('click', () => {
+  timer.style.display = 'none';
+  playAndPause.style.display = 'none';
+  parentTimer.style.display = 'none';
+
+  timerIcon.addEventListener('click', () => {
+    if (timer.style.display === 'none') {
+      parentTimer.style.display = 'flex';
       timer.style.display = 'flex';
       playAndPause.style.display = 'flex';
-    });
+    } else {
+      parentTimer.style.display = 'none';
+      timer.style.display = 'none';
+      playAndPause.style.display = 'none';
+    }
   });
 
-  timer.textContent = time;
 
   function buildTimer() {
     seconds++;

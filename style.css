@@ -73,6 +73,33 @@ li:hover {
   overflow-x: hidden;
   animation-duration: 1s;
 }
+#parent-timer-div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(158, 158, 247, 0.15); /* Background color with opacity */
+  border-radius: 20px;
+}
+#parent-timer-div {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(158, 158, 247);
+  background-image : url('rainpic.jpg');
+  background-size : cover;
+  width : 400px;
+  height : 300px;
+  border-radius : 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px 100px 20px 100px; /* Adjust padding as needed */
+  margin : 0 30px 30px 0;
+}
 
 #timer-div {
   display : flex;
@@ -85,16 +112,31 @@ li:hover {
   font-size : 128px;
   margin : 0;
   display : none;
-  margin-bottom : 2rem;
+  margin-bottom : 1rem;
+  margin-top : 1rem;
 }
 #play-pause {
-  animation-duration: 1.85s; /* don't forget to set a duration! */
+  animation-duration: 1.85s;
   display : none;
   justify-content: center;
   align-items: center;
 }
 #play {
   display : flex;
+}
+
+#Timer-icon {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  margin-right : 1rem;
+}
+
+#Timer-icon:hover {
+  transform: translateY(-5px);
+}
+#timer-link {
+  display : flex;
+  justify-content: center;
+  align-items: center;
 }
 #reset {
   margin : 2rem;
